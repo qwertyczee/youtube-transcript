@@ -1,20 +1,20 @@
 {
-  "version": 2,
-  "builds": [
-    {
-      "src": "server.js",
-      "use": "@vercel/node"
+    "version": 2,
+    "builds": [
+        {
+            "src": "server.js",
+            "use": "@vercel/node"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/(.*)",
+            "dest": "/server.js"
+        }
+    ],
+    "functions": {
+        "api/*.js": {
+            "timeout": 10
+        }
     }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "/server.js"
-    }
-  ]
-  "functions": {
-    "api/*.js": {
-      "timeout": 10
-    }
-  }
 }
