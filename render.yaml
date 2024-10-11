@@ -5,4 +5,4 @@ services:
     buildCommand: 'yarn install'
     startCommand: 'node server.js' # Make sure your entry point file is named `index.js`
     plan: free
-    region: oregon
+    region: frankfurt
