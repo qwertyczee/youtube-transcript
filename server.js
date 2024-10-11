@@ -1,20 +1,9 @@
 const express = require('express');
 const { YoutubeTranscript } = require('youtube-transcript');
-const cors = require('cors');
 const app = express();
 const PORT = process.env.PORT || 8080;
 
-const corsOptions = {
-    origin: '*',
-    optionsSuccessStatus: 200
-};
-
 app.use(express.json());
-app.use(cors(corsOptions));
-
-app.get('/', (req, res) => {
-    res.send('Hello World!');
-});
 
 app.get('/transcript/string/:id', (req, res) => {
     const videoId = req.params.id;
