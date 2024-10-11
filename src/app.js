@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const transciptRoutes = require('./routes/transciptRoutes');
+const transciptRoutes = require('./routes/transcriptRoutes');
 const errorHandler = require('./middleware/errorHandler');
 
 const app = express();
