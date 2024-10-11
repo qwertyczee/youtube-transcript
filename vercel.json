@@ -12,4 +12,9 @@
       "dest": "/server.js"
     }
   ]
+  "functions": {
+    "api/*.js": {
+      "timeout": 10
+    }
+  }
 }
